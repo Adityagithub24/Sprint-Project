@@ -30,6 +30,12 @@ public class FinanceManagerController {
 	@Autowired
 	EmployeeService employeeService;
 	
+	@GetMapping("/hellomanager")
+	public ResponseEntity<String> helloManager() 
+	{
+		return new ResponseEntity<>(" Hi Manager every thing working fine ",HttpStatus.OK);
+	}
+	
 	@GetMapping("/fetchallemployees")
 	public ResponseEntity<List<Employee>> fetchAllEmployees() throws EmployeeNotFoundException
 	{
